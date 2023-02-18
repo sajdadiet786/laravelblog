@@ -1,0 +1,86 @@
+/  public function getCategory(CategoryFormRequest $request){
+//             // $tags=[];
+//             // if($search=$request->name){
+//             //     $tags=Category::where('category_id','LIKE',"%$search%")->get();
+//             // }
+//             // return response()->json($tags);
+//             $data=Category::select('name')->whereIn('category_id', $request->ids);
+//             // $data=Products::table('products')->select('price')->get();
+//             // $myquery->user_id;
+//             return round($data);
+        
+//     }
+// $('#category_id').select2();
+//     $('#category_id').change(function(){
+//       var product_ids = $(this).val();
+    
+//       $.ajax({
+//         url: '{{route('get.category')}}',
+//         method: 'POST',
+//         data: {
+//           ids: product_ids,
+//           _token: '{{csrf_token()}}'
+//         },
+//         beforeSend: function(){
+//           // $(placeholder).addClass('loading');
+//         },
+//         success: function(data){
+//           console.log(data);
+//           $('#category').val(data);
+//         }
+        
+//       })
+
+
+//     });
+//     $("form").submit(function(){
+//       $.ajax({
+//         url:'{{route('get.category')}}',
+//         method:'POST',
+
+//       })
+//   // alert("Submitted");
+// });
+
+// //888888
+//             $(document).ready(function(){
+// $('.category_id').select2({
+//     placeholder:'select',
+//     allowClear:true,
+
+// });
+// $('#category_id').select2({
+//    ajax:{
+//     url:"{{route('get-category')}}",
+//     type:"post",
+//     delay:250,
+//     datatype:'json',
+//     data:function(params){
+//         return{
+//             name:params.term,
+//             "_token":"{{csrf_token()}}",
+//         };
+//     },
+//     processResults:function(data){
+//         return{
+//             results:$.map(data,function(item){
+
+//                 return{
+//                     id:item.id,
+//                     text:item.tittle
+//                 }
+//             })
+//             };
+//         },
+   
+//         },
+   
+
+                
+// });
+
+
+
+
+//             });
+
