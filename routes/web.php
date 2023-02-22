@@ -1,9 +1,10 @@
 <?php
-
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Controller\FrontendController;
+use Laravel\Socialite\Facades\Socialite;
+use App\Http\Controllers\LoginController;
 use Cviebrock\EloquentSluggable\Services\SlugService;
+use App\Http\Controllers\Controller\FrontendController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -57,3 +58,21 @@ Route::get('check_slug', function () {
     // Route::post('categories',[App\Http\Controllers\Admin\PostController::class,'getCategory'])->name('get.category');
 });
 });
+
+ 
+// Route::get('/auth/redirect', function () {
+//     return Socialite::driver('google')->redirect();
+// });
+ 
+// Route::get('/auth/callback', function () {
+//     $user = Socialite::driver('google')->user();
+ 
+//     // $user->token
+// });
+
+Route::get('/auth/github/redirect', [LoginController::class,'githubredirect'])->name('redirect');
+Route::get('/auth/github/callback', [LoginController::class,'githubcallback'])->name('callback');
+
+
+Route::get('/auth/google/redirect', [LoginController::class,'googleredirect'])->name('googleredirect');
+Route::get('/auth/google/callback', [LoginController::class,'googlecallback'])->name('callback');
